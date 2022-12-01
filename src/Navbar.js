@@ -9,7 +9,8 @@ export default function Navbar() {
         <h1>Superflight</h1>
       </Link>
       <ul>
-        {/* <Link to="/pricing">Pricing</Link> */}
+        <Link to="/">Search flights</Link>
+        <Link to="/Tips">Search tips</Link>
         {/* <Link to="/about">About</Link> */}
       </ul>
     </nav>

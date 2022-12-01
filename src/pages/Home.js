@@ -1,5 +1,7 @@
 import BannerOne from "./BannerOne";
 import PlanStaycation from "./PlanStaycation";
+import Advice from "./Advice";
+import Footer from "./Footer";
 
 export default function Home() {
   return (
@@ -44,6 +46,8 @@ export default function Home() {
       </section>
       <BannerOne></BannerOne>
       <PlanStaycation></PlanStaycation>
+      <Advice></Advice>
+      <Footer></Footer>
     </>
   );
 }
