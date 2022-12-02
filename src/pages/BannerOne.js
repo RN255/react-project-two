@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function BannerOne() {
   return (
     <>
@@ -8,7 +10,9 @@ export default function BannerOne() {
             We’re telling all in our latest guide to the art of finding the best
             deals out there, helping you save time and spend less.
           </p>
-          <button>See our tips</button>
+          <Link to="/Tips">
+            <button>See our tips</button>
+          </Link>
         </div>
       </div>
     </>
