@@ -2,61 +2,58 @@ import BannerOne from "./BannerOne";
 import PlanStaycation from "./PlanStaycation";
 import Advice from "./Advice";
 import Footer from "./Footer";
-import Journeys from "./Journeys";
-import { useState } from "react";
+import JourneysList from "./JourneysList";
+
+import { useState, useRef, useEffect } from "react";
+import uuid from "react-uuid";
+
+const LOCAL_STORAGE_KEY = "journeysApp.journeys";
 
 export default function Home() {
-  // const [from, setFrom] = useState("");
-  // const [to, setTo] = useState("");
-  // const [departDate, setDepartDate] = useState("");
-  // const [returnDate, setReturnDate] = useState("");
-  // const [cabinClass, setCabinClass] = useState("Economy");
+  const [journeys, setJourneys] = useState([]);
+  const journeyFromRef = useRef();
+  const journeyToRef = useRef();
+  const journeyDepartDateRef = useRef();
+  const journeyReturnDateRef = useRef();
+  const journeyCabinClassRef = useRef();
 
-  // const [journey, SetJourney] = useState([
-  //   {
-  //     from: "London",
-  //     to: "Toyko",
-  //     depart: "Dec 12",
-  //     return: "Jan 23",
-  //     cabinClass: "business",
-  //     id: 1,
-  //   },
-  //   {
-  //     from: "Ney York",
-  //     to: "Paris",
-  //     depart: "Feb 14",
-  //     return: "March 5",
-  //     cabinClass: "first class",
-  //     id: 2,
-  //   },
-  //   {
-  //     from: "Seoul",
-  //     to: "Tokyo",
-  //     depart: "April 17",
-  //     return: "June 34",
-  //     cabinClass: "economy",
-  //     id: 3,
-  //   },
-  // ]);
+  useEffect(() => {
+    const storedJourneys = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    if (storedJourneys) setJourneys(storedJourneys);
+  }, []);
 
-  // const handleDelete = (id) => {
-  //   const newJourney = journey.filter((journey) => journey.id !== id);
-  //   SetJourney(newJourney);
-  // };
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(journeys));
+  }, [journeys]);
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   SetJourney([from, to, departDate, returnDate, cabinClass]);
-  //   console.log(journey)
-  // };
+  function handleAddJourney(e) {
+    const from = journeyFromRef.current.value;
+    const to = journeyToRef.current.value;
+    const departDate = journeyDepartDateRef.current.value;
+    const returnDate = journeyReturnDateRef.current.value;
+    const cabinClass = journeyCabinClassRef.current.value;
 
-  // const handleChange = (e) => {
-  //   const name = e.target.name;
-  //   const value = e.target.value;
-  //   SetJourney((prev) => {
-  //     return { ...prev, [name]: value };
-  //   });
-  // };
+    setJourneys((prevJourneys) => {
+      return [
+        ...prevJourneys,
+        {
+          id: uuid(),
+          from: from,
+          to: to,
+          departDate: departDate,
+          returnDate: returnDate,
+          cabinClass: cabinClass,
+        },
+      ];
+    });
+
+    journeyFromRef.current.value = null;
+    journeyToRef.current.value = null;
+    journeyDepartDateRef.current.value = null;
+    journeyReturnDateRef.current.value = null;
+    journeyCabinClassRef.current.value = null;
+
+  }
 
   return (
     <>
@@ -66,75 +63,73 @@ export default function Home() {
             <h2>Let the journey begin</h2>
           </div>
           <div id="formDiv">
-            <form /*onSubmit={handleSubmit}*/>
+            <form>
               <label htmlFor="from">From</label>
               <input
+                ref={journeyFromRef}
                 type="text"
                 id="from"
                 name="from"
                 maxLength="50"
-                // value={from}
-                // onChange={(e) => setFrom(e.target.value)}
-                // onChange={handleChange}
               />
               <br />
 
               <label htmlFor="to">To</label>
               <input
+                ref={journeyToRef}
                 type="text"
                 id="to"
                 name="to"
                 maxLength="50"
-                // value={to}
-                // onChange={(e) => setTo(e.target.value)}
-                // onChange={handleChange}
               />
               <br />
 
               <label htmlFor="depart">Depart</label>
               <input
+                ref={journeyDepartDateRef}
                 type="date"
                 id="depart"
                 name="depart"
-                // value={departDate}
-                // onChange={(e) => setDepartDate(e.target.value)}
-                // onChange={handleChange}
               />
               <br />
 
               <label htmlFor="return">Return</label>
               <input
+                ref={journeyReturnDateRef}
                 type="date"
                 id="return"
                 name="return"
-                // value={returnDate}
-                // onChange={(e) => setReturnDate(e.target.value)}
-                // onChange={handleChange}
               />
               <br />
 
               <label htmlFor="cabinClass">Cabin class:</label>
               <select
+                ref={journeyCabinClassRef}
                 id="cabinClass"
                 name="cabinClass"
-                // value={cabinClass}
-                // onChange={(e) => setCabinClass(e.target.value)}
-                // onChange={handleChange}
               >
-                <option /*value="Economy"*/>Economy</option>
-                <option /*value="Premium Economy"*/>Premium Economy</option>
-                <option /*value="Business class"*/>Business class</option>
-                <option /*value="First class"*/>First class</option>
+                <option>Economy</option>
+                <option>Premium Economy</option>
+                <option>Business class</option>
+                <option>First class</option>
               </select>
 
-              <div id="buttonHolder">
-                <input type="submit" value="Book flight" id="submitButton" />
-              </div>
+              <button onClick={handleAddJourney}>Book flight</button>
+
+              {/* <div id="buttonHolder">
+                <input
+                  onClick={handleAddJourney}
+                  type="submit"
+                  value="Book flight"
+                  id="submitButton"
+                />
+              </div> */}
             </form>
           </div>
         </div>
       </section>
-      <Journeys journey={journey} handleDelete={handleDelete}></Journeys>
+
+      <JourneysList journeys={journeys}></JourneysList>
       <BannerOne></BannerOne>
       <PlanStaycation></PlanStaycation>
       <Advice></Advice>

@@ -11,7 +11,7 @@ export default function Navbar() {
       <ul>
         <Link to="/">Search flights</Link>
         <Link to="/Tips">Search tips</Link>
-        <Link to="/journeys">Journeys</Link>
+        <Link to="/journeysList">Journey List</Link>
       </ul>
     </nav>
   );
