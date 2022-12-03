@@ -134,7 +134,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <Journeys journey={journey} handleDelete={handleDelete}></Journeys> */}
+      <Journeys journey={journey} handleDelete={handleDelete}></Journeys>
       <BannerOne></BannerOne>
       <PlanStaycation></PlanStaycation>
       <Advice></Advice>
