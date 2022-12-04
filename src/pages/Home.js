@@ -19,9 +19,14 @@ export default function Home() {
 
   const [formErrorMsg, setFormErrorMsg] = useState("");
 
+  const [noJourneysMsg, setnoJourneysMsg] = useState("");
+
   useEffect(() => {
     const storedJourneys = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     if (storedJourneys) setJourneys(storedJourneys);
+    if (storedJourneys.length < 1) {
+      setnoJourneysMsg("You currently have no journeys");
+    }
   }, []);
 
   useEffect(() => {
@@ -63,6 +68,8 @@ export default function Home() {
       journeyReturnDateRef.current.value = null;
       journeyCabinClassRef.current.value = null;
 
+      setnoJourneysMsg("");
+
       setFormErrorMsg("");
     } else {
       setFormErrorMsg("Please fill in all fields");
@@ -72,6 +79,9 @@ export default function Home() {
   function deleteJourney(id) {
     const newJourneys = journeys.filter((item) => item.id !== id);
     setJourneys(newJourneys);
+    if (newJourneys.length < 1) {
+      setnoJourneysMsg("You currently have no journeys");
+    }
   }
 
   return (
@@ -155,6 +165,7 @@ export default function Home() {
       <JourneysList
         journeys={journeys}
         deleteJourney={deleteJourney}
+        noJourneysMsg={noJourneysMsg}
       ></JourneysList>
       <BannerOne></BannerOne>
       <PlanStaycation></PlanStaycation>

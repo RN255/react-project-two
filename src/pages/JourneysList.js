@@ -1,6 +1,6 @@
 import Journey from "./Journey";
 
-export default function JourneysList({ journeys, deleteJourney }) {
+export default function JourneysList({ journeys, deleteJourney, noJourneysMsg }) {
   return (
     <>
       <div id="JourneyMainHolder">
@@ -13,6 +13,7 @@ export default function JourneysList({ journeys, deleteJourney }) {
           <p>Cabin class:</p>
           <div></div>
         </div>
+        <p id="noJourneyMsg">{noJourneysMsg}</p>
         {journeys.map((journeys) => {
           return (
             <>
