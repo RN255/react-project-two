@@ -126,7 +126,7 @@ form select {
   margin: 15px auto;
 }
 
-form #submitButton {
+form #buttonHolder button {
   border: none;
   border-radius: 5px;
   width: 300px;
@@ -138,8 +138,13 @@ form #submitButton {
   background-color: #00a698;
 }
 
-form #submitButton:hover {
+form #buttonHolder button:hover {
   cursor: pointer;
+}
+
+form #buttonHolder #formErrorMessage {
+  height: 1em;
+  color: rgb(255, 0, 0);
 }
 
 /* bannerOne */
@@ -333,6 +338,10 @@ form #submitButton:hover {
   margin: auto;
 }
 
+#JourneyMainHolder h2 {
+  padding: 15px 25px 5px;
+}
+
 #JourneyMainHolder #journeyTitles {
   display: flex;
   background-color: #82828220;
@@ -356,7 +365,6 @@ form #submitButton:hover {
   display: flex;
   padding: 0 25px;
   align-items: center;
-
 }
 
 #journeyInfoContainer p {
@@ -370,7 +378,6 @@ form #submitButton:hover {
   background-color: #0770e350;
   border: none;
   border-radius: 5px;
-  
 }
 
 /* footer  */

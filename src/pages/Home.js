@@ -17,6 +17,8 @@ export default function Home() {
   const journeyReturnDateRef = useRef();
   const journeyCabinClassRef = useRef();
 
+  const [formErrorMsg, setFormErrorMsg] = useState("");
+
   useEffect(() => {
     const storedJourneys = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     if (storedJourneys) setJourneys(storedJourneys);
@@ -27,32 +29,44 @@ export default function Home() {
   }, [journeys]);
 
   function handleAddJourney(e) {
+    e.preventDefault();
     const from = journeyFromRef.current.value;
     const to = journeyToRef.current.value;
     const departDate = journeyDepartDateRef.current.value;
     const returnDate = journeyReturnDateRef.current.value;
     const cabinClass = journeyCabinClassRef.current.value;
 
-    setJourneys((prevJourneys) => {
-      return [
-        ...prevJourneys,
-        {
-          id: uuid(),
-          from: from,
-          to: to,
-          departDate: departDate,
-          returnDate: returnDate,
-          cabinClass: cabinClass,
-        },
-      ];
-    });
+    if (
+      from != "" &&
+      to != "" &&
+      departDate != "" &&
+      returnDate != "" &&
+      cabinClass != ""
+    ) {
+      setJourneys((prevJourneys) => {
+        return [
+          ...prevJourneys,
+          {
+            id: uuid(),
+            from: from,
+            to: to,
+            departDate: departDate,
+            returnDate: returnDate,
+            cabinClass: cabinClass,
+          },
+        ];
+      });
 
-    journeyFromRef.current.value = null;
-    journeyToRef.current.value = null;
-    journeyDepartDateRef.current.value = null;
-    journeyReturnDateRef.current.value = null;
-    journeyCabinClassRef.current.value = null;
+      journeyFromRef.current.value = null;
+      journeyToRef.current.value = null;
+      journeyDepartDateRef.current.value = null;
+      journeyReturnDateRef.current.value = null;
+      journeyCabinClassRef.current.value = null;
 
+      setFormErrorMsg("");
+    } else {
+      setFormErrorMsg("Please fill in all fields");
+    }
   }
 
   function deleteJourney(id) {
@@ -86,6 +100,7 @@ export default function Home() {
                 id="to"
                 name="to"
                 maxLength="50"
+                required
               />
               <br />
 
@@ -119,7 +134,10 @@ export default function Home() {
                 <option>First class</option>
               </select>
 
-              <button onClick={handleAddJourney}>Book flight</button>
+              <div id="buttonHolder">
+                <button onClick={handleAddJourney}>Book flight</button>
+                <p id="formErrorMessage">{formErrorMsg}</p>
+              </div>
 
               {/* <div id="buttonHolder">
                 <input
@@ -134,7 +152,10 @@ export default function Home() {
         </div>
       </section>
 
-      <JourneysList journeys={journeys} deleteJourney={deleteJourney}></JourneysList>
+      <JourneysList
+        journeys={journeys}
+        deleteJourney={deleteJourney}
+      ></JourneysList>
       <BannerOne></BannerOne>
       <PlanStaycation></PlanStaycation>
       <Advice></Advice>
