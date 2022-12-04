@@ -55,6 +55,11 @@ export default function Home() {
 
   }
 
+  function deleteJourney(id) {
+    const newJourneys = journeys.filter((item) => item.id !== id);
+    setJourneys(newJourneys);
+  }
+
   return (
     <>
       <section id="formSection">
@@ -129,7 +134,7 @@ export default function Home() {
         </div>
       </section>
 
-      <JourneysList journeys={journeys}></JourneysList>
+      <JourneysList journeys={journeys} deleteJourney={deleteJourney}></JourneysList>
       <BannerOne></BannerOne>
       <PlanStaycation></PlanStaycation>
       <Advice></Advice>

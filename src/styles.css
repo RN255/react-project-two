@@ -74,6 +74,7 @@ body {
 
 #formSection h2 {
   font-size: 60px;
+  margin: 25px;
 }
 
 #formSection p {
@@ -325,11 +326,51 @@ form #submitButton:hover {
   font-weight: bold;
 }
 
-/* journeys  */
+/* Journey list  */
 
-#journeys {
-  width: 70vw;
+#JourneyMainHolder {
+  width: 80vw;
   margin: auto;
+}
+
+#JourneyMainHolder #journeyTitles {
+  display: flex;
+  background-color: #82828220;
+  border-radius: 10px;
+  padding: 0 25px;
+}
+
+#JourneyMainHolder #journeyTitles p {
+  width: 20%;
+}
+
+#JourneyMainHolder #journeyTitles div {
+  width: 100px;
+}
+
+/* journey details  */
+
+#journeyInfoContainer {
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  padding: 0 25px;
+  align-items: center;
+
+}
+
+#journeyInfoContainer p {
+  width: 20%;
+}
+
+#journeyInfoContainer button {
+  height: 80%;
+  width: 100px;
+  font-size: 12px;
+  background-color: #0770e350;
+  border: none;
+  border-radius: 5px;
+  
 }
 
 /* footer  */
