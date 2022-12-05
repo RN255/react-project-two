@@ -374,6 +374,112 @@ form #buttonHolder #formErrorMessage {
   border-radius: 5px;
 }
 
+/* Partnership  */
+
+#partnership {
+  width: 70vw;
+  margin: auto;
+}
+
+#partnership img {
+  width: 100%;
+  margin: 35px 0;
+}
+
+#partnership #partnershipTitleSection {
+  text-align: center;
+}
+
+#partnership h1 {
+  font-size: 35px;
+}
+
+#partnership #partnershipTitleSection p {
+  color: #777777;
+}
+
+#partnership p {
+  line-height: 1.5em;
+}
+
+#partnershipsInfoSquaresContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+
+#partnershipsInfoSquaresContainer .partnershipsInfoSquares {
+  height: 200px;
+  width: 200px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 3%;
+}
+
+#partnershipsInfoSquaresContainer #PartInfoBoxOne {
+  background-color: #0770e3;
+}
+
+#partnershipsInfoSquaresContainer #PartInfoBoxTwo {
+  background-color: #03035e;
+}
+
+#partnershipsInfoSquaresContainer #PartInfoBoxThree {
+  background-color: #0770e3;
+}
+
+#partnershipsInfoSquaresContainer #PartInfoBoxFour {
+  background-color: #8ccaf7;
+}
+
+#partnershipsInfoSquaresContainer .partnershipsInfoSquares h3 {
+  font-size: 40px;
+  margin: 15% 0 0;
+  padding: 0;
+}
+
+#partnershipsInfoSquaresContainer .partnershipsInfoSquares p {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+#partnershipPhoneManContainer {
+  display: flex;
+}
+
+#partnershipPhoneManContainer img {
+  width: 50%;
+  border-radius: 3%;
+  object-fit: contain;
+}
+
+#partnershipPhoneManContainer #partnershipPhoneManContainerInfo {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+#partnershipPhoneManContainer #partnershipPhoneManContainerInfo h3 {
+  color: #0770e3;
+  font-size: 40px;
+  font-weight: 300;
+  margin: 0;
+}
+
+#partnershipPhoneManContainer #partnershipPhoneManContainerInfo p {
+  line-height: 1.75em;
+}
+
+#joinGlobalContainer {
+  margin-bottom: 100px;
+}
+
+#joinGlobalContainer h3 {
+  color: #0770e3;
+  font-size: 30px;
+  font-weight: 300;
+}
+
 /* footer  */
 
 #footerContainer {

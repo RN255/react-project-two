@@ -15,6 +15,9 @@ export default function Navbar() {
         <li>
           <Link to="/Tips">Search tips</Link>
         </li>
+        <li>
+          <Link to="/Partnership">Partnership</Link>
+        </li>
         {/* <Link to="/journeysList">Journey List</Link> */}
       </ul>
     </nav>
