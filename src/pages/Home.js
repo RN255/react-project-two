@@ -6,6 +6,7 @@ import JourneysList from "./JourneysList";
 
 import { useState, useRef, useEffect } from "react";
 import uuid from "react-uuid";
+import HotelAdvice from "./hotelAdvice";
 
 const LOCAL_STORAGE_KEY = "journeysApp.journeys";
 
@@ -42,11 +43,11 @@ export default function Home() {
     const cabinClass = journeyCabinClassRef.current.value;
 
     if (
-      from != "" &&
-      to != "" &&
-      departDate != "" &&
-      returnDate != "" &&
-      cabinClass != ""
+      from !== "" &&
+      to !== "" &&
+      departDate !== "" &&
+      returnDate !== "" &&
+      cabinClass !== ""
     ) {
       setJourneys((prevJourneys) => {
         return [
@@ -120,6 +121,7 @@ export default function Home() {
                 type="date"
                 id="depart"
                 name="depart"
+                className="JourneydatesForm"
               />
               <br />
 
@@ -129,6 +131,7 @@ export default function Home() {
                 type="date"
                 id="return"
                 name="return"
+                className="JourneydatesForm"
               />
               <br />
 
@@ -168,8 +171,9 @@ export default function Home() {
         noJourneysMsg={noJourneysMsg}
       ></JourneysList>
       <BannerOne></BannerOne>
-      <PlanStaycation></PlanStaycation>
       <Advice></Advice>
+      <PlanStaycation></PlanStaycation>
+      <HotelAdvice></HotelAdvice>
       <Footer></Footer>
     </>
   );

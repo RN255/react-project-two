@@ -8,7 +8,7 @@ export default function Advice() {
       <div id="adviceContainer">
         <div id="advice">
           <div className="adviceCard">
-            <img src={adviceOne} alt="adive image one"></img>
+            <img src={adviceOne} alt="man on mountain"></img>
             <h3>Ready when you are</h3>
             <p>
               See where you can travel to right now and find the best deals
@@ -16,7 +16,7 @@ export default function Advice() {
             </p>
           </div>
           <div className="adviceCard">
-            <img src={adviceTwo} alt="adive image one"></img>
+            <img src={adviceTwo} alt="playing with mobile phone"></img>
             <h3>Plan with confidence</h3>
             <p>
               Stay one step ahead with the latest travel updates, free hotel and
@@ -24,7 +24,7 @@ export default function Advice() {
             </p>
           </div>
           <div className="adviceCard">
-            <img src={adviceThree} alt="adive image one"></img>
+            <img src={adviceThree} alt="playing with mobile phone"></img>
             <h3>Keep it simple</h3>
             <p>
               No hidden fees. No hidden charges. No funny business. With us,
