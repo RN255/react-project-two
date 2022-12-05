@@ -1,40 +1,34 @@
+import { Link } from "react-router-dom";
+import facebookIcon from "../images/facebook.png";
+import instagramIcon from "../images/instagram.png";
+import youtubeIcon from "../images/youtube.png";
+import twitterIcon from "../images/twitter.png";
+
 export default function Footer() {
   return (
     <>
       <div id="footerContainer">
         <div id="footer">
-          <div>
-            <h4>Explore</h4>
-            <a>Domestic flights</a>
-            <a>Cities</a>
-            <a>Airports</a>
-            <a>Countries/Regions</a>
-            <a>Airlines</a>
-            <a>Flights</a>
-            <a>Hotels</a>
-            <a>Car hire</a>
+          <div id="footerSocialMediaIconsContainer">
+            <img src={facebookIcon} alt="facebook icon"></img>
+            <img src={instagramIcon} alt="instagram icon"></img>
+            <img src={youtubeIcon} alt="youtube icon"></img>
+            <img src={twitterIcon} alt="twitter icon"></img>
           </div>
-          <div>
-            <h4>Partners</h4>
-            <a>Work with us</a>
-            <a>Advertise with us</a>
-            <a>Travel insights</a>
-          </div>
-          <div>
-            <h4>Company</h4>
-            <a>About us</a>
-            <a>Why Superflight?</a>
-            <a>Media</a>
-            <a>Our people</a>
-            <a>Accessibility</a>
-            <a>Sustainability</a>
-          </div>
-          <div>
-            <h4>Help</h4>
-            <a>Help</a>
-            <a>Privacy settings</a>
-            <a>Security</a>
-          </div>
+          <ul>
+            <li>
+              <Link to="/">Search flights</Link>
+            </li>
+            <li>-</li>
+            <li>
+              <Link to="/Tips">Search tips</Link>
+            </li>
+            <li>-</li>
+            <li>
+              <Link to="/Partnership">Partnership</Link>
+            </li>
+          </ul>
+          <p>© 2022 superflight</p>
         </div>
       </div>
     </>

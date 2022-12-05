@@ -91,6 +91,7 @@ export default function Home() {
         <div id="formContainer">
           <div>
             <h2>Let the journey begin</h2>
+            <p>follow your heart to your next destination</p>
           </div>
           <div id="formDiv">
             <form>
@@ -149,7 +150,7 @@ export default function Home() {
 
               <div id="buttonHolder">
                 <button onClick={handleAddJourney}>Book flight</button>
-                <p id="formErrorMessage">{formErrorMsg}</p>
+                <h3 id="formErrorMessage">{formErrorMsg}</h3>
               </div>
 
               {/* <div id="buttonHolder">
