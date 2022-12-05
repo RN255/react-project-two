@@ -2,12 +2,13 @@ import Navbar from "./Navbar";
 import Tips from "./pages/Tips";
 import Home from "./pages/Home";
 import Partnership from "./pages/Partnership";
-import JourneysList from "./pages/JourneysList";
 import { Route, Routes } from "react-router-dom";
+import ScrollToTop from "./pages/ScrollToTop";
 
 function App() {
   return (
     <>
+      <ScrollToTop></ScrollToTop>
       <Navbar />
       <div className="container">
         <Routes>

@@ -39,7 +39,7 @@ export default function Partnership() {
           </div>
         </div>
         <div id="partnershipPhoneManContainer">
-          <img src={partnershipPhoneMan}></img>
+          <img src={partnershipPhoneMan} alt="man on phone"></img>
           <div id="partnershipPhoneManContainerInfo">
             <h3>Keep your finger on the travel pulse</h3>
             <p>
