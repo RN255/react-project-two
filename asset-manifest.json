@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/react-project-two/static/css/main.93251be4.css",
+    "main.js": "/react-project-two/static/js/main.7d207766.js",
+    "static/media/background.jpg": "/react-project-two/static/media/background.d5d67d2debf9793da6ee.jpg",
+    "static/media/parisSkyline.jpg": "/react-project-two/static/media/parisSkyline.556a1285aa2ed7e5de11.jpg",
+    "static/media/travelHacksBackground.webp": "/react-project-two/static/media/travelHacksBackground.894e782747e51a62cf88.webp",
+    "static/media/bannerOnebackground.jpg": "/react-project-two/static/media/bannerOnebackground.ce545b84924d20c82c83.jpg",
+    "static/media/hotelAdviceTwo.svg": "/react-project-two/static/media/hotelAdviceTwo.d7a3d654b3d47a1bff950e506cd7a088.svg",
+    "static/media/partnershipPhoneMan.jpg": "/react-project-two/static/media/partnershipPhoneMan.cf3c3f0e016e20faa0bd.jpg",
+    "static/media/hotelTwo.jpg": "/react-project-two/static/media/hotelTwo.0dedf88ed6d2b6cd15c5.jpg",
+    "static/media/hotelOne.jpg": "/react-project-two/static/media/hotelOne.bce0f57dd95d8dde3ccc.jpg",
+    "static/media/instagram.png": "/react-project-two/static/media/instagram.79535458a8a6d88f81d4.png",
+    "static/media/hotelAdviceThree.svg": "/react-project-two/static/media/hotelAdviceThree.c5f162641b08c223925c5b290cd11428.svg",
+    "static/media/adviceThree.svg": "/react-project-two/static/media/adviceThree.f5197051c204af6979ed88310da7a3b9.svg",
+    "static/media/hotelAdviceOne.svg": "/react-project-two/static/media/hotelAdviceOne.72c7dd2fe7dbe364f98d0ffc59586da7.svg",
+    "static/media/adviceTwo.svg": "/react-project-two/static/media/adviceTwo.b0aba788961733bb4ae96edfa9fc1d02.svg",
+    "static/media/hotelThree.jpg": "/react-project-two/static/media/hotelThree.b48624895e8bcbba9ede.jpg",
+    "static/media/cross.png": "/react-project-two/static/media/cross.5d07d5fec43074868a45.png",
+    "static/media/airplane-mode.png": "/react-project-two/static/media/airplane-mode.615dc6a9f5886d6de2bc.png",
+    "static/media/twitter.png": "/react-project-two/static/media/twitter.c6e48e60f856cb822273.png",
+    "static/media/adviceOne.svg": "/react-project-two/static/media/adviceOne.5de1acf42362551ad765921f088516b8.svg",
+    "static/media/facebook.png": "/react-project-two/static/media/facebook.01a470d813915c298403.png",
+    "static/media/youtube.png": "/react-project-two/static/media/youtube.b4f2b64af1b614ce26dc.png",
+    "static/media/star.png": "/react-project-two/static/media/star.d0cbd94e0a4a62fc2bf4.png",
+    "index.html": "/react-project-two/index.html",
+    "main.93251be4.css.map": "/react-project-two/static/css/main.93251be4.css.map",
+    "main.7d207766.js.map": "/react-project-two/static/js/main.7d207766.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.93251be4.css",
+    "static/js/main.7d207766.js"
+  ]
+}
