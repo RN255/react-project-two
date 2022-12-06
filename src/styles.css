@@ -173,7 +173,7 @@ form #buttonHolder #formErrorMessage {
 
 #bannerOne p {
   font-size: 16px;
-  line-height: 1.5rem;
+  line-height: 1.5em;
 }
 
 #bannerOne button {
@@ -347,7 +347,7 @@ form #buttonHolder #formErrorMessage {
 
 #JourneyMainHolder #journeyTitles {
   display: flex;
-  background-color: #82828220;
+  background-color: #0770e310;
   border-radius: 10px;
   padding: 0 25px;
 }
@@ -655,10 +655,59 @@ form #buttonHolder #formErrorMessage {
     color: #0770e3;
   }
 
+  /* bannerOne */
+
+  #bannerContainer {
+    width: 95vw;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #bannerOne {
+    color: white;
+    padding: 5px 0 0 5px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #bannerOne h2 {
+    font-size: 30px;
+  }
+
+  #bannerOne p {
+    font-size: 20px;
+  }
+
+  /* advice  */
+
+  #advice {
+    display: block;
+    width: 80vw;
+  }
+
+  .adviceCard {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
   /* plan staycation section  */
 
   #hotelContainer {
     display: block;
     justify-content: space-between;
   }
+
+  #hotelContainer img {
+    width: 100%;
+  }
+
+  .hotelCard {
+    margin-bottom: 20px;
+  }
+
+
+
+
+
+
 }
