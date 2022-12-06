@@ -25,6 +25,10 @@ body {
   margin: auto;
 }
 
+#Mobilenav {
+  display: none;
+}
+
 .nav h1 {
   font-size: 24px;
   margin: 0;
@@ -51,6 +55,10 @@ body {
 
 .nav li:hover {
   color: #0770e390;
+}
+
+#menuIcon {
+  display: none;
 }
 
 /* home page form  */
@@ -553,6 +561,11 @@ form #buttonHolder #formErrorMessage {
     margin: 0;
   }
 
+  #menuIcon {
+    display: block;
+    margin-right: 10px;
+  }
+
   /* it had hit its maximum length, needs to be turned into a burger  */
   .nav a {
     font-size: 10px;
@@ -705,9 +718,92 @@ form #buttonHolder #formErrorMessage {
     margin-bottom: 20px;
   }
 
+  /* mobile nav  */
 
+  #Mobilenav {
+    display: block;
+    z-index: 10;
+    background-color: #68adf7;
+    position: absolute;
+    height: 100vh;
+    width: 50vw;
+  }
 
+  #Mobilenav img {
+    margin: 10px;
+  }
 
+  #Mobilenav h1 {
+    margin: 0 9px;
+  }
 
+  #Mobilenav ul {
+    padding: 5px;
+    margin: 5px;
+    list-style: none;
+    display: block;
+  }
 
+  #Mobilenav a {
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-weight: 300;
+  }
+
+  .nav li:hover {
+    color: #0770e390;
+  }
+
+  /* tips page */
+
+  #tips {
+    width: 95vw;
+    margin: auto;
+  }
+
+  #tips hr {
+    margin: 50px auto;
+    width: 60vw;
+  }
+
+  /* Partnership page */
+
+  #partnership {
+    width: 95vw;
+  }
+
+  #partnershipsInfoSquaresContainer {
+    display: block;
+  }
+
+  #partnershipsInfoSquaresContainer .partnershipsInfoSquares {
+    width: 60%;
+    margin: auto;
+  }
+
+  #partnershipsInfoSquaresContainer .partnershipsInfoSquares h3 {
+    font-size: 40px;
+    margin: 5% 0 0;
+    padding: 15% 0 0;
+  }
+
+  #partnershipPhoneManContainer {
+    display: block;
+    width: 95vw;
+  }
+
+  #partnershipPhoneManContainer img {
+    width: 100%;
+    border-radius: 3%;
+    object-fit: contain;
+  }
+
+  #joinGlobalContainer {
+    padding: 20px;
+  }
 }
