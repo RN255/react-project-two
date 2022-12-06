@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-project-two/static/css/main.93251be4.css",
-    "main.js": "/react-project-two/static/js/main.7d207766.js",
+    "main.js": "/react-project-two/static/js/main.ce49887e.js",
     "static/media/background.jpg": "/react-project-two/static/media/background.d5d67d2debf9793da6ee.jpg",
     "static/media/parisSkyline.jpg": "/react-project-two/static/media/parisSkyline.556a1285aa2ed7e5de11.jpg",
     "static/media/travelHacksBackground.webp": "/react-project-two/static/media/travelHacksBackground.894e782747e51a62cf88.webp",
@@ -25,10 +25,10 @@
     "static/media/star.png": "/react-project-two/static/media/star.d0cbd94e0a4a62fc2bf4.png",
     "index.html": "/react-project-two/index.html",
     "main.93251be4.css.map": "/react-project-two/static/css/main.93251be4.css.map",
-    "main.7d207766.js.map": "/react-project-two/static/js/main.7d207766.js.map"
+    "main.ce49887e.js.map": "/react-project-two/static/js/main.ce49887e.js.map"
   },
   "entrypoints": [
     "static/css/main.93251be4.css",
-    "static/js/main.7d207766.js"
+    "static/js/main.ce49887e.js"
   ]
 }
