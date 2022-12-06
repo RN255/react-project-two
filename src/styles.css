@@ -387,6 +387,10 @@ form #buttonHolder #formErrorMessage {
   border-radius: 5px;
 }
 
+#journeyInfoContainer .mobileScreenJourneyInfo {
+  display: none;
+}
+
 /* Partnership  */
 
 #partnership {
@@ -524,7 +528,7 @@ form #buttonHolder #formErrorMessage {
   padding: 0;
 }
 
-#footer ul li { 
+#footer ul li {
   margin: 5px 5px;
 }
 
@@ -541,42 +545,120 @@ form #buttonHolder #formErrorMessage {
   margin: 0;
 }
 
-
-
-
 @media (max-width: 1000px) {
+  /* navbar  */
+  .nav {
+    width: 100%;
+    margin: 0;
+    margin: 0;
+  }
+
+  /* it had hit its maximum length, needs to be turned into a burger  */
+  .nav a {
+    font-size: 10px;
+  }
+
+  /* i have hidden it  */
+  .nav ul {
+    display: none;
+  }
+
+  /* home page form  */
   /* form section  */
 
   #formContainer {
-    width: 90vw;
+    width: 95%;
+  }
+
+  #formSection h2 {
+    font-size: 30px;
+  }
+
+  #formDiv {
+    padding: 10px;
   }
 
   form label {
     width: 100%;
-  }
-
-  form label {
     margin: 30px 0 10px;
-  }
-
-  form label span {
-    margin-right: 5px;
   }
 
   form input {
     width: 100%;
   }
 
-  form textarea {
+  form select {
     width: 100%;
-    margin-top: 0;
-  }
-
-  form #messageLabel {
-    top: 0px;
   }
 
   #buttonHolder {
-    margin: 50px auto 0;
+    width: 100%;
+  }
+
+  form #buttonHolder button {
+    width: 100%;
+  }
+
+  /* Journey list  */
+
+  #JourneyMainHolder {
+    width: 95vw;
+  }
+
+  #JourneyInnerHolder {
+    width: 95vw;
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #JourneyInnerHolder #journeyTitles {
+    display: none;
+  }
+
+  /* journey details  */
+
+  #journeyInfoContainer {
+    width: 29%;
+    display: block;
+    height: 300px;
+    padding: 0 5px 5px;
+    margin: 5px;
+    background-color: #0770e310;
+    border-radius: 5px;
+    /* border: 1px solid black; */
+    position: relative;
+  }
+
+  #journeyInfoContainer p {
+    width: 100%;
+    margin: 0;
+    /* height: 20%; */
+    /* background-color: #00a698; */
+  }
+
+  #journeyInfoContainer button {
+    height: 20px;
+    width: 75px;
+    font-size: 12px;
+    margin: 5px 5px;
+    position: absolute;
+    bottom: 5px;
+  }
+
+  #journeyInfoContainer .mobileScreenJourneyInfo {
+    display: block;
+    /* background-color: #00a698; */
+    margin-top: 10px;
+    font-weight: bold;
+    color: #0770e3;
+  }
+
+  /* plan staycation section  */
+
+  #hotelContainer {
+    display: block;
+    justify-content: space-between;
   }
 }
