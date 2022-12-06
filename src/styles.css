@@ -726,15 +726,18 @@ form #buttonHolder #formErrorMessage {
     background-color: #68adf7;
     position: absolute;
     height: 100vh;
-    width: 50vw;
+    width: 100vw;
+    text-align: center;
   }
 
   #Mobilenav img {
     margin: 10px;
+    position: absolute;
+    right: 10px;
   }
 
   #Mobilenav h1 {
-    margin: 0 9px;
+    margin: 15vh 9px 0;
   }
 
   #Mobilenav ul {
@@ -742,6 +745,11 @@ form #buttonHolder #formErrorMessage {
     margin: 5px;
     list-style: none;
     display: block;
+  }
+
+  #Mobilenav ul li {
+    width: fit-content;
+    margin: auto;
   }
 
   #Mobilenav a {
