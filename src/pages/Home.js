@@ -25,7 +25,7 @@ export default function Home() {
   useEffect(() => {
     const storedJourneys = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     if (storedJourneys) setJourneys(storedJourneys);
-    if (storedJourneys.length !== null && storedJourneys.length < 1) {
+    if (storedJourneys.length < 1) {
       setnoJourneysMsg("You currently have no journeys");
     }
   }, []);
