@@ -25,9 +25,11 @@ export default function Home() {
   useEffect(() => {
     const storedJourneys = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     if (storedJourneys) setJourneys(storedJourneys);
-    if (storedJourneys.length < 1) {
-      setnoJourneysMsg("You currently have no journeys");
-    }
+    // just take this out? we will lose the message but it will still work? maybe add it in somewhere else?
+    // or could it be else from the guy above?
+    // if (storedJourneys.length < 1) {
+    //   setnoJourneysMsg("You currently have no journeys");
+    // }
   }, []);
 
   useEffect(() => {
@@ -80,9 +82,9 @@ export default function Home() {
   function deleteJourney(id) {
     const newJourneys = journeys.filter((item) => item.id !== id);
     setJourneys(newJourneys);
-    if (newJourneys.length < 1) {
-      setnoJourneysMsg("You currently have no journeys");
-    }
+    // if (newJourneys.length < 1) {
+    //   setnoJourneysMsg("You currently have no journeys");
+    // }
   }
 
   return (
