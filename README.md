@@ -3,7 +3,7 @@
 This is a web page where users can book flights and their journeys are stored in a list. There are other pages with advice and information on partnerships.
 
 ## How to use
-** NOTE: The main page does not initially load on github pages. There is no error so I presume it is just how github pages works with react. If you click on pages in the navbar they will display **  
+** NOTE: The main page does not initially load on github pages. My understanding is this is a problem with how github pages works with react. If you click on pages in the navbar they will display **  
 
 website is live at: https://rn255.github.io/react-project-two/
 
