@@ -1,3 +1,47 @@
+## Project Name: Superflight - flight booking web page (React)  
+
+This is a web page where users can book flights and their journeys are stored in a list. There are other pages with advice and information on partnerships.
+
+## How to use
+** NOTE: The main page does not initially load on github pages. My understanding is this is a problem with how github pages works with react. If you click on pages in the navbar they will display **  
+
+website is live at: https://rn255.github.io/react-project-two/
+
+## Screenshots
+![Superflight screenshot](https://github.com/RN255/react-project-two/blob/master/src/images/superflightScreenshotOne.jpg)
+
+![Superflight screenshot](https://github.com/RN255/react-project-two/blob/master/src/images/superflightScreenshotTwo.jpg)
+
+![Superflight screenshot](https://github.com/RN255/react-project-two/blob/master/src/images/superflightScreenshotThree.jpg)
+
+## Motivation
+I wanted to improve my understanding of React.
+
+## Tech used
+- React
+- React Router
+
+## Project features
+- Users can select flights on a form
+- an error is given if form not filled in properly 
+- flight data is saved to a list
+
+## Lessons learnt
+- improving understanding of React
+- React Router
+- Props
+- displaying lists in react
+- storing data in react
+
+## future development
+- Users could be given a choice of flights and then asked to choose one. This way it would be more similar to a real world web site.
+- More information could be added, including, car rental and hotel rental.
+
+## Standard React README
+<details>
+<summary>click to view</summary>
+<br>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
